@@ -47,7 +47,7 @@ export default function TrustedClientsSection() {
     ];
 
     return (
-        <section className="w-full py-12 bg-[#000014] text-white">
+        <section className="w-full py-12 bg-transperent text-white">
             <div className="container mx-auto px-4 md:px-6 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-12">Нам доверяют</h2>
             </div>
@@ -62,7 +62,7 @@ export default function TrustedClientsSection() {
                         {[...rowLogos, ...rowLogos].map((item, itemIndex) => (
                             <div
                                 key={`${item.id}-${rowIndex}-${itemIndex}`}
-                                className="flex-shrink-0 w-[200px] h-[100px] bg-[#13131E] rounded-lg flex items-center justify-center mx-4 p-4"
+                                className="flex-shrink-0 w-[200px] h-[100px] bg-gray-200 rounded-lg flex items-center justify-center mx-4 p-4"
                             >
                                 <Image
                                     src={item.image || "/placeholder.svg"}
@@ -78,7 +78,7 @@ export default function TrustedClientsSection() {
                 ))}
             </div>
             <div className="container mx-auto px-4 md:px-6 text-center mt-12">
-                <Link href="#" prefetch={false} className="group inline-flex items-center text-[#888DFE] text-lg font-medium">
+                <Link href="#" prefetch={false} className="group inline-flex items-center text-blue-500 text-lg font-medium">
                     Читать кейсы клиентов
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
