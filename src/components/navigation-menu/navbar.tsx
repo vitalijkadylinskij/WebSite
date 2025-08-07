@@ -65,7 +65,7 @@ export default function MetaNavbar() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="bg-transperent hover:cursor-pointer font-normal">AI glasses</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[full] lg:grid-cols-[.75fr_1fr]">
+                                    <ul className="grid gap-3 p-6 md:w-[600px] lg:w-[full] lg:grid-cols-[.75fr_1fr]">
                                         <li className="row-span-3">
                                             <NavigationMenuLink asChild>
                                                 <a
@@ -95,7 +95,7 @@ export default function MetaNavbar() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="bg-transperent hover:cursor-pointer font-normal">Meta Quest</NavigationMenuTrigger>
                                 <NavigationMenuContent className="w-100%">
-                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[full] ">
+                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[full] ">
                                         <ListItem href="/meta-quest/quest-3" title="Quest 3">
                                             Our latest VR headset.
                                         </ListItem>
@@ -115,7 +115,7 @@ export default function MetaNavbar() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="bg-transperent hover:cursor-pointer font-normal">Apps and games</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[600px] ">
                                         <ListItem href="/apps-games/popular" title="Popular Apps">
                                             Top-rated applications.
                                         </ListItem>
@@ -139,14 +139,10 @@ export default function MetaNavbar() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem >
-                                <Link href="/explore-meta" passHref>
-                                    <NavigationMenuLink className="bg-transperent hover:cursor-pointer" >Explore Meta</NavigationMenuLink>
-                                </Link>
+                                <NavigationMenuLink className="bg-transperent hover:cursor-pointer" >Explore Meta</NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Link href="/support" passHref>
-                                    <NavigationMenuLink className="bg-transperent hover:cursor-pointer">Support</NavigationMenuLink>
-                                </Link>
+                                <NavigationMenuLink className="bg-transperent hover:cursor-pointer">Support</NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>

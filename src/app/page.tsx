@@ -11,11 +11,13 @@ export default function Home() {
         <div className="min-h-screen w-full mx-auto">
             <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
                 <Navbar />
-                <NewsSection />
-                <ShopDevicesSection />
-                <ConnectSection />
-                <ActionsSection />
-                <LeadershipSection />
+                <div className="max-w-[80%]">
+                    <NewsSection />
+                    <ShopDevicesSection />
+                    <ConnectSection />
+                    <ActionsSection />
+                    <LeadershipSection />
+                </div>
                 <Footer />
             </main>
         </div>
