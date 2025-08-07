@@ -24,7 +24,7 @@ export default function ShopDevicesSection() {
 
     return (
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div className="container px-4 md:px-6 w-full max-w-full">
+            <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 border-0">
                     <div className="w-full max-w-175">
                         <h2 className="w-full text-4xl tracking-tighter sm:text-5xl">Shop the latest devices and expand
@@ -34,7 +34,7 @@ export default function ShopDevicesSection() {
                 <div className="min-w-full grid max-w-6xl items-start gap-8 lg:grid-cols-2">
                     {devices.map((device) => (
                         <div key={device.id} className="flex flex-col items-center text-center bg-white overflow-hidden group">
-                            <div className="relative w-full aspect-[3/2] overflow-hidden rounded-t-xl">
+                            <div className="relative w-full aspect-[3/2] overflow-hidden rounded-xl">
                                 <Image
                                     src={device.mainImage || "/placeholder.svg"}
                                     alt={device.name}

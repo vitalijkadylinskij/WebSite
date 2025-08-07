@@ -22,14 +22,14 @@ export default function ConnectSection() {
                         </Link>
                     </div>
                 </div>
-                <div className="w-full max-w-full aspect-[3/2] relative overflow-hidden">
+                <div className="w-full max-w-full relative rounded-xl overflow-hidden ">
                     <Image
                         src="/images/Technology.png"
                         alt="Connect in new ways with our products"
                         width={1800}
-                        height={100}
+                        height={300}
                         style={{ objectFit: 'cover' }}
-                        className="w-full aspect-[3/2] rounded-xl h-full max-h-3/5"
+                        className="w-full h-full max-h-[530px]"
                     />
                 </div>
             </div>
