@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/footer";
 import MetaNavbar from "@/components/navigation-menu/navbar";
-import I18nProvider from '@/components/i18n-provider';
+import I18nProvider from "@/components/i18n-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <I18nProvider>
-        <MetaNavbar />
-        {children}
-        <Footer />
-      </I18nProvider>
+        <I18nProvider>
+          <MetaNavbar />
+          {children}
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

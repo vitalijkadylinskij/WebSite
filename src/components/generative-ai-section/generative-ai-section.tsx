@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function GenerativeAISection() {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ export default function GenerativeAISection() {
       <div className="container mx-auto px-4 md:px-6 relative items-center">
         <div className="flex flex-col space-y-6 text-left lg:pr-12">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-[70%]">
-            {t('generative_ai_section_header')}
+            {t("generative_ai_section_header")}
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-lg">
             Разрабатываем и внедряем

@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { User, ShoppingBag } from "lucide-react";
-import LanguageSwitcher from '@/components/language-switcher'
+import LanguageSwitcher from "@/components/language-switcher";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,

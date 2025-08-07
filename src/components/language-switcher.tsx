@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button'; // Используем вашу кнопку
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button"; // Используем вашу кнопку
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'ru' : 'en';
+    const newLang = i18n.language === "en" ? "ru" : "en";
     i18n.changeLanguage(newLang);
   };
 

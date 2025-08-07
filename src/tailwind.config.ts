@@ -58,7 +58,6 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      // Удаляем keyframes и animation отсюда, они теперь в globals.css
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
