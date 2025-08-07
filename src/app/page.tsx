@@ -6,6 +6,7 @@ import ActionsSection from "@/components/actions-section/actions-section";
 import LeadershipSection from "@/components/leadership-section/leadership-section";
 import Footer from "@/components/footer/footer";
 import GenerativeAISection from "@/components/generative-ai-section/generative-ai-section";
+import TrustedClientsSection from "@/components/trusted-clients-section/trusted-clients-section";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
                     <ActionsSection />
                     <LeadershipSection />
                 </div>
+                <TrustedClientsSection />
                 <Footer />
             </main>
         </div>
