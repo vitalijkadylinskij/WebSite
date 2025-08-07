@@ -5,12 +5,14 @@ import ConnectSection from "@/components/connect-section/connect-section";
 import ActionsSection from "@/components/actions-section/actions-section";
 import LeadershipSection from "@/components/leadership-section/leadership-section";
 import Footer from "@/components/footer/footer";
+import GenerativeAISection from "@/components/generative-ai-section/generative-ai-section";
 
 export default function Home() {
     return (
         <div className="min-h-screen w-full mx-auto">
             <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
                 <Navbar />
+                <GenerativeAISection />
                 <div className="max-w-[80%]">
                     <NewsSection />
                     <ShopDevicesSection />
