@@ -9,11 +9,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { User, ShoppingBag } from "lucide-react";
-import LanguageSwitcher from "@/components/language-switcher";
+import LanguageSwitcher from "@/components/language-switcher/language-switcher";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -42,6 +41,7 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export default function MetaNavbar() {
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">

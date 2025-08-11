@@ -5,7 +5,6 @@ import ActionsSection from "@/components/actions-section/actions-section";
 import LeadershipSection from "@/components/leadership-section/leadership-section";
 import GenerativeAISection from "@/components/generative-ai-section/generative-ai-section";
 import TrustedClientsSection from "@/components/trusted-clients-section/trusted-clients-section";
-import LanguageSwitcher from "@/components/language-switcher";
 
 export default function HomePage() {
   return (

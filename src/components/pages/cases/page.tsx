@@ -1,4 +1,4 @@
-import CaseStudiesSection from "../../../components/case-studies-section/case-studies-section";
+import CaseStudiesSection from "../../case-studies-section/case-studies-section";
 
 export default function CasesPage() {
   return (

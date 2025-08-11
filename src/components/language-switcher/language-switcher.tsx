@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button"; // Используем вашу кнопку
+import { Button } from "@/components/ui/button";
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -16,9 +16,9 @@ export default function LanguageSwitcher() {
       <Button
         onClick={toggleLanguage}
         variant="outline"
-        className="px-4 py-2 text-sm font-medium border-none cursor-pointer bg-transparent shadow-none"
+        className="px-4 py-2 text-sm font-medium border-none cursor-pointer bg-transparent shadow-none uppercase"
       >
-        {i18n.language.toUpperCase()}
+        {i18n.language}
       </Button>
     </div>
   );

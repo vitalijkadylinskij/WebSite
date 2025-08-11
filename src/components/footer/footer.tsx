@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Facebook, Instagram, X } from "lucide-react";
 import Image from "next/image";
-import LanguageSwitcher from "@/components/language-switcher";
+import LanguageSwitcher from "@/components/language-switcher/language-switcher";
 
 export default function Footer() {
   return (
