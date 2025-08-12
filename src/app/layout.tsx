@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/footer";
 import MetaNavbar from "@/components/navigation-menu/navbar";
-import I18nProvider from "../i18n-provider";
+import '../i18n'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,21 +22,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string }
 }>) {
   return (
-    <html lang="locale">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <I18nProvider>
           <MetaNavbar />
           {children}
           <Footer />
-      </I18nProvider>
       </body>
     </html>
   );

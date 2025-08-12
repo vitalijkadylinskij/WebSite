@@ -19,7 +19,7 @@ export default function GenerativeAISection() {
 
       <div className="container mx-auto px-4 md:px-6 relative items-center">
         <div className="flex flex-col space-y-6 text-left lg:pr-12">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-[70%]">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-[60%]">
             {t("generative_ai_section_header")}
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-lg">
