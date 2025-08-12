@@ -1,39 +1,42 @@
-const caseStudies = [
+import type { CaseStudy } from "@/types"
+
+
+export const caseStudies: CaseStudy[] = [
   {
-    id: 1,
+    id: "1",
     image: "/images/ImageNews.jpg",
     title:
       "Как без LLM автоматизировать до 70% обращений в поддержку: опыт Дом.ру",
     companyLogo: "/images/Ray-Ban.png",
     companyName: "дом.ру",
-    href: "/pages/cases/case-one",
+    description: "1111111111111111111111111111111111111"
   },
   {
-    id: 2,
-    image: "/images/VRmn.jpg",
+    id: "2",
+    image: "/images/ImageNews.jpg",
     title:
       "Как чат-бот Катюша от Совкомбанка успевает обработать 1 миллион обращений в месяц",
     companyLogo: "/images/Ray-Ban.png",
     companyName: "СОВКОМБАНК",
-    href: "/pages/cases/case-second",
+    description: "22222222222222222222222222222222222222222"
   },
   {
-    id: 3,
-    image: "/images/Technology.png",
+    id: "3",
+    image: "/images/unnamed.jpg",
     title:
       "Как чат-боту Игорю удалось 2 года подряд возглавлять отраслевой рейтинг мобильных",
     companyLogo: "/images/Ray-Ban.png",
     companyName: "Компания X",
-    href: "/pages/cases/case-three",
+    description: "3333333333333333333333333333333333333333"
   },
   {
-    id: 4,
+    id: "4",
     image: "/images/unnamed.jpg",
     title:
       "Как с помощью бота увеличить конверсию по NPS-обзвонам на 15%: опыт DNS",
     companyLogo: "/images/Ray-Ban.png",
     companyName: "DNS",
-    href: "/pages/cases/case-four",
+    description: "4444444444444444444444444444444444444444"
   },
 ];
 export default caseStudies;

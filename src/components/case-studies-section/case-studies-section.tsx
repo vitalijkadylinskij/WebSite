@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CaseStudy } from "@/types"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import caseStudies from "./data-cases";
 
-export default function CaseStudiesSection() {
+interface CaseStudiesSectionProps {
+  caseStudies: CaseStudy[]
+}
+
+export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ caseStudies }) => {
   return (
     <section className="w-full py-12 bg-white">
       <div className="container max-w-[80%] mx-auto px-4 md:px-6">
@@ -12,10 +16,7 @@ export default function CaseStudiesSection() {
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {caseStudies.map((caseStudy) => (
-            <Card
-              key={caseStudy.id}
-              className="bg-gray-300 gap-3 border-none cursor-pointer rounded-lg overflow-hidden flex flex-col py-0 group"
-            >
+            <Card key={caseStudy.id} className="bg-gray-300 gap-3 border-none cursor-pointer rounded-lg overflow-hidden flex flex-col py-0 group">
               <div className="relative w-full aspect-[3/1] overflow-hidden">
                 <Image
                   src={caseStudy.image || "/placeholder.svg"}
@@ -44,11 +45,12 @@ export default function CaseStudiesSection() {
               </CardHeader>
               <CardContent className="p-6 pt-0">
                 <Link
-                  href={caseStudy.href}
+                  key={caseStudy.id}
+                  href={`/cases/${caseStudy.id}`}
                   prefetch={false}
                   className="inline-flex items-center text-blue-500 underline text-sm font-medium"
                 >
-                  Подробнее
+                 <span className="inline-flex items-center text-blue-500 underline text-sm font-medium">Подробнее</span>
                 </Link>
               </CardContent>
             </Card>

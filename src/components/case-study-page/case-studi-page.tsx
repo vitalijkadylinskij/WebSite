@@ -1,15 +1,22 @@
-interface CaseStudyPageProps {
-  title: string
-  content: string
+interface ProductDetailsPageProps {
+  params: {
+    id: string
+  }
 }
 
-export default function CaseStudyPage({ title, content }: CaseStudyPageProps) {
+export default function CaseStudyPage({ params }: ProductDetailsPageProps) {
+  const { id } = params
+
+
   return (
-    <main className="w-screen h-screen py-12 bg-white">
-      <div className="container max-w-[80%] mx-auto px-4 md:px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-12 text-center">{title}</h1>
-        <p>{content}</p>
-      </div>
-    </main>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] p-4">
+      <h1 className="text-3xl font-bold mb-4">Детали продукта</h1>
+      <p className="text-lg text-muted-foreground">
+        Вы просматриваете продукт с ID: <span className="font-semibold text-primary">{id}</span>
+      </p>
+      <p className="mt-2 text-center max-w-md">
+        Здесь будут отображаться подробные сведения о продукте, загруженные на основе его ID.
+      </p>
+    </div>
   )
 }
