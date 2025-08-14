@@ -10,11 +10,11 @@ export default function GenerativeAISection() {
   return (
     <section className="relative w-full py-20 md:py-32 lg:py-40 bg-gray-900 text-white overflow-hidden">
       <Image
-        src="/images/Generative-AI-1.png"
+        src="/images/unnamed.jpg"
         alt="Abstract generative AI background"
         fill
         style={{ objectFit: "cover", objectPosition: "center" }}
-        className="absolute inset-0 z-0 opacity-50"
+        className="absolute inset-0 z-0 opacity-70"
       />
 
       <div className="container mx-auto px-4 md:px-6 relative items-center">
