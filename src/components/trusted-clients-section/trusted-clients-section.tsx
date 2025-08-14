@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import logoItems from "./data-trusted-clients";
+import { useTranslation } from "react-i18next";
 
 export default function TrustedClientsSection() {
+  const { t } = useTranslation()
+
   const rows = [
     logoItems.slice(0, 8),
     logoItems.slice(8, 16),
@@ -52,7 +57,7 @@ export default function TrustedClientsSection() {
           prefetch={false}
           className="group inline-flex items-center text-blue-500 text-lg font-medium"
         >
-          Читать кейсы клиентов
+          {t("trustedClients.button")}
           <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>

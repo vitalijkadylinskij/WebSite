@@ -39,7 +39,7 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = "ListItem";
 
-export default function MetaNavbar() {
+export default function MainNavbar() {
   const { t } = useTranslation()
 
   return (

@@ -6,20 +6,23 @@ import GenerativeAISection from "@/components/generative-ai-section/generative-a
 import TrustedClientsSection from "@/components/trusted-clients-section/trusted-clients-section";
 import TechnologiesSection from "@/components/technologies-section/technologies-section";
 import { ServicesSection } from "@/components/service-section/services-section";
+import HomepageLayout from "@/app/homePage-Layout";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
-      <GenerativeAISection />
-      <div className="max-w-[80%]">
-        <ShopDevicesSection />
-        <TechnologiesSection />
-        <ProjectsSection />
-        <PortfolioSection />
-        <AiInnovationSection />
-        <ServicesSection />
-      </div>
-      <TrustedClientsSection />
-    </main>
+    <HomepageLayout>
+      <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
+        <GenerativeAISection />
+        <div className="max-w-[80%]">
+          <ShopDevicesSection />
+          <TechnologiesSection />
+          <ProjectsSection />
+          <PortfolioSection />
+          <AiInnovationSection />
+          <ServicesSection />
+        </div>
+        <TrustedClientsSection />
+      </main>
+    </HomepageLayout>
   );
 }

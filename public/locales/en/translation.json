@@ -122,11 +122,14 @@
       "description": "Development and implementation of AI solutions for business process automation"
     }
   },
+  "trustedClients": {
+    "button": "Read Client Cases"
+  },
   "footer": {
     "innovation": "All rights reserved. Innovations in AI.",
     "stacklvl": "STEKLEVELGROUP.",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "twitter": "Twitter"
-  }
+  },
 }
