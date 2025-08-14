@@ -1,4 +1,10 @@
 {
+  "navigation": {
+    "about": "About",
+    "technologies": "Technologies",
+    "services": "Services",
+    "contact": "Contact"
+  },
   "generative_ai_section": {
     "header": "We are building the future of financial technologies",
     "description": "Digital transformation of banks and financial institutions using artificial intelligence and modern technologies",

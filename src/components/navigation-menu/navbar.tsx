@@ -4,16 +4,14 @@ import * as React from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { User, ShoppingBag } from "lucide-react";
 import LanguageSwitcher from "@/components/language-switcher/language-switcher";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -42,6 +40,7 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export default function MetaNavbar() {
+  const { t } = useTranslation()
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
@@ -63,22 +62,22 @@ export default function MetaNavbar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink href="#about" className="bg-transperent hover:cursor-pointer">
-                  О нас
+                  {t("navigation.about")}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="#technologies" className="bg-transperent hover:cursor-pointer">
-                  Технологии
+                  {t("navigation.technologies")}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="#services" className="bg-transperent hover:cursor-pointer">
-                  Услуги
+                  {t("navigation.services")}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="#contact" className="bg-transperent hover:cursor-pointer">
-                  Контакты
+                  {t("navigation.contact")}
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
