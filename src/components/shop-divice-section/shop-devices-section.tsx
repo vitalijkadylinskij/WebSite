@@ -1,54 +1,42 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import devices from "./data-shop-device";
+"use client";
+import { useTranslation } from "react-i18next";
 
 export default function ShopDevicesSection() {
+  const { t } = useTranslation();
+
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 border-0">
-          <div className="w-full max-w-175">
-            <h2 className="w-full text-4xl tracking-tighter sm:text-5xl">
-              Shop the latest devices and expand your world
-            </h2>
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 text-left">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">{t("shop_devices_section.header")}</h2>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              {t("shop_devices_section.foundation_information")}
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t("shop_devices_section.information_about_specialization")}
+            </p>
           </div>
-        </div>
-        <div className="min-w-full grid max-w-6xl items-start gap-8 lg:grid-cols-2">
-          {devices.map((device) => (
-            <div
-              key={device.id}
-              className="flex flex-col items-center text-center bg-white overflow-hidden group"
-            >
-              <div className="relative w-full aspect-[3/2] overflow-hidden rounded-xl">
-                <Image
-                  src={device.mainImage || "/placeholder.svg"}
-                  alt={device.name}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="w-full"
-                />
-              </div>
-              <div className="relative -mt-8 z-10 w-1/2">
-                <Image
-                  src={device.productImage || "/placeholder.svg"}
-                  alt={`${device.name} product`}
-                  width={200}
-                  height={100}
-                  className="object-contain drop-shadow-lg opacity-0.3 w-full"
-                />
-              </div>
-              <div className="p-6 flex flex-col items-center mt-6 space-y-4">
-                <h3 className="text-2xl font-bold">{device.name}</h3>
-                <p className="text-gray-600 max-w-xs">{device.description}</p>
-                <Link href={device.href} passHref prefetch={false}>
-                  <Button className="bg-[#007bff] cursor-pointer hover:bg-[#0056b3] text-white px-8 py-6 rounded-full text-lg font-medium shadow-lg">
-                    Shop now
-                  </Button>
-                </Link>
+          <div className="relative">
+            <div className="flip-container w-full h-80 rounded-2xl cursor-pointer">
+              <div className="flip-inner">
+                <div className="flip-front">
+                  <img
+                    src="/images/Technology.png"
+                    alt="AI Technology Office"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flip-back">
+                  <img
+                    src="/images/ai-financial-office.png"
+                    alt="AI Dashboard Analytics"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

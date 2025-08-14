@@ -1,3 +1,126 @@
 {
-  "generative_ai_section_header": "Generative artificial intelligence for solving business problems"
+  "generative_ai_section": {
+    "header": "We are building the future of financial technologies",
+    "description": "Digital transformation of banks and financial institutions using artificial intelligence and modern technologies",
+    "button": "Find out more"
+  },
+  "shop_devices_section": {
+    "header": "Our mission",
+    "foundation_information": "Founded in October 2018, STEKLEVELGRUPP brings together a team of highly qualified specialists with expertise in fintech, web development, distributed systems and artificial intelligence.",
+    "information_about_specialization": "We specialize in automating risk department processes, building forecasting and decision-making systems based on AI."
+  },
+  "technologies_section": {
+    "header": "Technologies we use",
+    "description":"Modern technology stack for building reliable and scalable solutions",
+    "backend": {
+      "title": "Backend"
+    },
+    "frontend": {
+      "title": "Frontend"
+    },
+    "database": {
+      "title": "Database"
+    },
+    "ai": {
+      "title": "Artificial Intelligence"
+    }
+  },
+  "projects_section": {
+    "header": "Our projects",
+    "description": "Examples of successful implementations and developments",
+    "banking_app": {
+      "title": "Banking Application",
+      "description": "Mobile platform with AI analytics",
+      "category": "Fintech"
+    },
+    "risk_management": {
+      "title": "Risk Management System",
+      "description": "AI platform for forecasting",
+      "category": "Risk Management"
+    },
+    "bi_platform": {
+      "title": "BI Platform",
+      "description": "Business analytics with AI context",
+      "category": "Analytics"
+    }
+  },
+  "portfolio_section": {
+    "title": "Project Portfolio",
+    "subtitle": "Our work in fintech and AI",
+    "viewAll": "View All Projects",
+    "banking": {
+      "title": "Banking Platform",
+      "description": "Comprehensive digital banking solution with AI analytics"
+    },
+    "risk": {
+      "title": "Risk Management",
+      "description": "AI system for financial risk forecasting and assessment"
+    },
+    "bi": {
+      "title": "BI Platform",
+      "description": "Intelligent analytics with contextual AI"
+    },
+    "trading": {
+      "title": "Trading Platform",
+      "description": "High-frequency trading system with algorithmic trading"
+    }
+  },
+  "innovation": {
+    "section": {
+      "title": "AI Innovations",
+      "subtitle": "Implementation of generative AI and large language models (LLM)"
+    },
+    "knowledgeGeneration": {
+      "title": "Knowledge Generation Systems",
+      "description": "Development of knowledge generation and enrichment systems, including RAG, fine-tuning and indexing tools",
+      "badge": "RAG"
+    },
+    "biPlatforms": {
+      "title": "BI Platforms with AI",
+      "description": "Implementation of BI platforms with business context, capable of generating and validating SQL queries",
+      "badge": "Business Intelligence"
+    },
+    "recommendationSystems": {
+      "title": "Recommendation Systems",
+      "description": "Next-generation systems that take into account user behavior dynamics and context",
+      "badge": "ML"
+    },
+    "agentSystems": {
+      "title": "Agent Systems",
+      "description": "Creating internal assistants using LLM to automate communications and decision making",
+      "badge": "LLM"
+    },
+    "predictiveAnalytics": {
+      "title": "Predictive Analytics",
+      "description": "Machine learning-based forecasting systems for financial markets and business processes",
+      "badge": "Forecasting"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Full development cycle from analytics to implementation and support",
+    "fintech": {
+      "title": "Fintech",
+      "description": "Digital transformation of banks and financial institutions"
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Automation of risk department processes and business processes"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "AI-based forecasting and decision-making systems"
+    },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Development and implementation of AI solutions for business process automation"
+    }
+  },
+  "footer": {
+    "innovation": "All rights reserved. Innovations in AI.",
+    "stacklvl": "STEKLEVELGROUP.",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "twitter": "Twitter"
+  }
 }

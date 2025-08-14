@@ -31,7 +31,7 @@ export default function TrustedClientsSection() {
             {[...rowLogos, ...rowLogos].map((item, itemIndex) => (
               <div
                 key={`${item.id}-${rowIndex}-${itemIndex}`}
-                className="flex-shrink-0 w-[200px] h-[100px] bg-gray-200 rounded-lg flex items-center justify-center mx-4 p-4"
+                className="flex-shrink-0 w-[200px] h-[100px] bg-gray-50 rounded-lg flex items-center justify-center mx-4 p-4"
               >
                 <Image
                   src={item.image || "/placeholder.svg"}

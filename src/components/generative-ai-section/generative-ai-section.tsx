@@ -20,18 +20,14 @@ export default function GenerativeAISection() {
       <div className="container mx-auto px-4 md:px-6 relative items-center">
         <div className="flex flex-col space-y-6 text-left lg:pr-12">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight max-w-[60%]">
-            {t("generative_ai_section_header")}
+            {t("generative_ai_section.header")}
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-lg">
-            Разрабатываем и внедряем
-            <span className="bg-teal-600/30 text-teal-200 px-2 py-1 rounded-md whitespace-nowrap">
-              AI-решения
-            </span>
-            , которые повышают эффективность команд и оптимизируют затраты
+          <p className="text-lg min-h-[85px] md:text-xl text-gray-300 max-w-lg">
+            {t("generative_ai_section.description")}
           </p>
           <Link href="#" prefetch={false}>
             <Button className="bg-transparent cursor-pointer border border-white text-white px-8 py-6 rounded-md text-lg font-medium hover:bg-white hover:text-gray-900 transition-colors duration-300 w-fit">
-              Оставить заявку
+              {t("generative_ai_section.button")}
             </Button>
           </Link>
         </div>

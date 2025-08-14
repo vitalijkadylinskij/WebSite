@@ -1,21 +1,23 @@
-import NewsSection from "@/components/news-section/news-section";
+import ProjectsSection from "@/components/news-section/projects-section";
 import ShopDevicesSection from "@/components/shop-divice-section/shop-devices-section";
-import ConnectSection from "@/components/connect-section/connect-section";
-import ActionsSection from "@/components/actions-section/actions-section";
-import LeadershipSection from "@/components/leadership-section/leadership-section";
+import PortfolioSection from "@/components/portfolio-section/portfolio-section";
+import AiInnovationSection from "@/components/ai-innovation-section/ai-innovation-section";
 import GenerativeAISection from "@/components/generative-ai-section/generative-ai-section";
 import TrustedClientsSection from "@/components/trusted-clients-section/trusted-clients-section";
+import TechnologiesSection from "@/components/technologies-section/technologies-section";
+import { ServicesSection } from "@/components/service-section/services-section";
 
 export default function HomePage() {
   return (
     <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
       <GenerativeAISection />
       <div className="max-w-[80%]">
-        <NewsSection />
         <ShopDevicesSection />
-        <ConnectSection />
-        <ActionsSection />
-        <LeadershipSection />
+        <TechnologiesSection />
+        <ProjectsSection />
+        <PortfolioSection />
+        <AiInnovationSection />
+        <ServicesSection />
       </div>
       <TrustedClientsSection />
     </main>
