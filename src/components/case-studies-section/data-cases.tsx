@@ -1,42 +1,46 @@
 import type { CaseStudy } from "@/types"
 
-
-export const caseStudies: CaseStudy[] = [
+export const getCaseStudies = (t: (key: string) => string): CaseStudy[] => [
   {
     id: "1",
-    image: "/images/ImageNews.jpg",
-    title:
-      "Как без LLM автоматизировать до 70% обращений в поддержку: опыт Дом.ру",
-    companyLogo: "/images/Ray-Ban.png",
-    companyName: "дом.ру",
-    description: "1111111111111111111111111111111111111"
+    image: "/images/cases-image/case-review-assistant.png",
+    title: t("cases.case1.title"),
+    companyLogo: "/images/cases-image/logo/walmart-logo.png",
+    companyName: "Walmart",
+    description: t("cases.case1.description"),
   },
   {
     id: "2",
-    image: "/images/ImageNews.jpg",
-    title:
-      "Как чат-бот Катюша от Совкомбанка успевает обработать 1 миллион обращений в месяц",
-    companyLogo: "/images/Ray-Ban.png",
-    companyName: "СОВКОМБАНК",
-    description: "22222222222222222222222222222222222222222"
+    image: "/images/cases-image/case-virtual-consultant.png",
+    title: t("cases.case2.title"),
+    companyLogo: "/images/cases-image/logo/carrefour-logo.png",
+    companyName: "Carrefour",
+    description: t("cases.case2.description"),
   },
   {
     id: "3",
-    image: "/images/unnamed.jpg",
-    title:
-      "Как чат-боту Игорю удалось 2 года подряд возглавлять отраслевой рейтинг мобильных",
-    companyLogo: "/images/Ray-Ban.png",
-    companyName: "Компания X",
-    description: "3333333333333333333333333333333333333333"
+    image: "/images/cases-image/case-support-agent.png",
+    title: t("cases.case3.title"),
+    companyLogo: "/images/cases-image/logo/ocado-logo.png",
+    companyName: "Ocado",
+    description: t("cases.case3.description"),
   },
   {
     id: "4",
-    image: "/images/unnamed.jpg",
-    title:
-      "Как с помощью бота увеличить конверсию по NPS-обзвонам на 15%: опыт DNS",
-    companyLogo: "/images/Ray-Ban.png",
-    companyName: "DNS",
-    description: "4444444444444444444444444444444444444444"
+    image: "/images/cases-image/case-erp-logistics.png",
+    title: t("cases.case4.title"),
+    companyLogo: "/images/cases-image/logo/target-logo.png",
+    companyName: "Target",
+    description: t("cases.case4.description"),
   },
-];
-export default caseStudies;
+  {
+    id: "5",
+    image: "/images/cases-image/case-employee-adaptation.png",
+    title: t("cases.case5.title"),
+    companyLogo: "/images/cases-image/logo/tesco-logo.png",
+    companyName: "Tesco",
+    description: t("cases.case5.description"),
+  },
+]
+
+export default getCaseStudies

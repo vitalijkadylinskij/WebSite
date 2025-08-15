@@ -132,4 +132,30 @@
     "facebook": "Facebook",
     "twitter": "Twitter"
   },
+  "cases": {
+    "title": "Cases",
+    "backToHome": "Back to Home",
+    "backToCases": "Back to Cases",
+    "details": "Learn More",
+    "case1": {
+      "title": "Review Management Assistant",
+      "description": "100% automatic review categorization, reduced response time to 24 hours, and increased customer satisfaction. Integration with Google/Yandex Maps, App Store, social networks, and website with natural language processing for sentiment, topic, and region analysis."
+    },
+    "case2": {
+      "title": "Virtual Online Consultant",
+      "description": "10-20% conversion increase, average check growth, and reduced refusals through personalized product selection. Cross-platform compatibility (web, mobile app, Telegram) with access to product catalog, inventory, and promotions for natural query processing."
+    },
+    "case3": {
+      "title": "AI Agent for Tech Support",
+      "description": "60-80% queries handled without operator involvement, improved satisfaction (CSAT), and 24/7 support without staff growth. CRM and logistics integration for processing queries about order status, returns, bonuses, and working hours via website chat, Telegram, and voice bot."
+    },
+    "case4": {
+      "title": "AI Agent for ERP (Logistics)",
+      "description": "15-20% write-offs reduction, up to 30% deficit reduction, and 25-35% order accuracy growth. ERP integration with sales history and warehouse, training predictive model by products, regions, and seasons for automatic order formation."
+    },
+    "case5": {
+      "title": "AI Assistant for Employee Adaptation",
+      "description": "30-50% adaptation time reduction, decreased new employee errors, and 15-20% retention improvement. LMS/HRM system integration for creating bot with step-by-step adaptation, FAQ, and checks with training and progress reports."
+    }
+  }
 }

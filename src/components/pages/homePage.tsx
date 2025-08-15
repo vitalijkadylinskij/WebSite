@@ -6,11 +6,11 @@ import GenerativeAISection from "@/components/generative-ai-section/generative-a
 import TrustedClientsSection from "@/components/trusted-clients-section/trusted-clients-section";
 import TechnologiesSection from "@/components/technologies-section/technologies-section";
 import { ServicesSection } from "@/components/service-section/services-section";
-import HomepageLayout from "@/app/homePage-Layout";
+import HomePageLayout from "@/app/AppLayouts/homePage-layout";
 
 export default function HomePage() {
   return (
-    <HomepageLayout>
+    <HomePageLayout>
       <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
         <GenerativeAISection />
         <div className="max-w-[80%]">
@@ -23,6 +23,6 @@ export default function HomePage() {
         </div>
         <TrustedClientsSection />
       </main>
-    </HomepageLayout>
+    </HomePageLayout>
   );
 }
