@@ -19,13 +19,14 @@ export default function Footer() {
             className="flex items-center justify-start"
             prefetch={false}
           >
-            <div className="w-[120px]">
+            <div>
               <Image
                 src="/images/Stack_lvl_logo.png"
                 alt="Описание моей SVG-иконки"
                 width={120}
-                height={65}
-                className="w-full object-cover"
+                height={60}
+                className="w-26 h-15 object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
           </Link>

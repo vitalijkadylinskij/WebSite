@@ -43,7 +43,7 @@ export default function TrustedClientsSection() {
                   alt={item.name}
                   width={150}
                   height={75}
-                  style={{ objectFit: "contain" }}
+                  style={{ width: "auto", height: "auto" }}
                   className="max-w-full max-h-full"
                 />
               </div>

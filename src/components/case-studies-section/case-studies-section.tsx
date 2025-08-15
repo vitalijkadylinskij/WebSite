@@ -28,19 +28,23 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = () => {
                   alt={caseStudy.title}
                   width={600}
                   height={200}
+                  priority={false}
                   className="w-full h-75 object-cover transition-all duration-700 ease-out group-hover:scale-125 water-blur-effect"
+                  style={{ width: '100%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <h3 className="text-xl font-bold mb-2">{caseStudy.title}</h3>
-                    <div className="flex items-center mb-3">
-                      <Image
-                        src={caseStudy.companyLogo}
-                        alt={caseStudy.companyName}
-                        width={20}
-                        height={20}
-                        className="mr-2 rounded-full"
-                      />
+                    <div className="flex w-8 h-6 items-center mb-3">
+                        <Image
+                          src={caseStudy.companyLogo}
+                          alt={caseStudy.companyName}
+                          width={20}
+                          height={20}
+                          className="mr-2 rounded-full"
+                          style={{ width: '100%', height: '100%' }}
+
+                        />
                       <span className="text-sm text-gray-200">{caseStudy.companyName}</span>
                     </div>
                     <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">

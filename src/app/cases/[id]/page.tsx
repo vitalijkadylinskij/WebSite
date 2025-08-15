@@ -34,6 +34,7 @@ export default function CaseStudyPage({ params }: PageProps) {
                 width={40}
                 height={40}
                 className="mr-3 rounded-full"
+                style={{ width: 'auto' }}
               />
               <span className="text-lg text-gray-600">{caseStudy.companyName}</span>
             </div>
@@ -43,10 +44,11 @@ export default function CaseStudyPage({ params }: PageProps) {
             <div className="relative w-full aspect-[2/1] mb-8 rounded-lg overflow-hidden">
               <Image
                 src={caseStudy.image || "/placeholder.svg"}
+                priority={true}
                 alt={caseStudy.title}
-                fill
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
+                width={750}
+                height={450}
+                style={{  width: '100%' }}
               />
             </div>
 

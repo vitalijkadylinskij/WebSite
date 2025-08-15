@@ -53,6 +53,7 @@ export default function MainNavbar() {
                 width={120}
                 height={60}
                 className="w-26 h-15 object-contain bg-transparent"
+                style={{width:'auto', height: 'auto'}}
               />
             </Link>
         </div>

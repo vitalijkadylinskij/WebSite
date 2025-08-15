@@ -31,6 +31,7 @@ export default function CasesPageLayout({
               width={120}
               height={60}
               className="w-26 h-15 object-contain bg-transparent"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Link href={backButtonHref} className="flex items-center gap-10 space-x-2 text-gray-500 hover:text-gray-900">
               <div className="flex items-center">
