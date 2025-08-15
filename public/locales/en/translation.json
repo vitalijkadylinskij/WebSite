@@ -123,6 +123,7 @@
     }
   },
   "trustedClients": {
+    "title": "They Trust Us",
     "button": "Read Client Cases"
   },
   "footer": {

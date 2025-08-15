@@ -17,10 +17,10 @@ export default function TrustedClientsSection() {
   ];
 
   return (
-    <section className="w-full py-12 bg-transperent text-white">
+    <section className="w-full py-12 bg-transperent text-gray-900">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-12">
-          Нам доверяют
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-12">
+          {t("trustedClients.title")}
         </h2>
       </div>
       <div className="relative w-full overflow-hidden py-6 space-y-8">

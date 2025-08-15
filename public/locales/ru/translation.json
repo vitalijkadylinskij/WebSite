@@ -124,6 +124,7 @@
     }
   },
   "trustedClients": {
+    "title": "Нам доверяют",
     "button": "Читать кейсы клиентов"
   },
   "footer": {
