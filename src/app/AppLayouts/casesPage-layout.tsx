@@ -1,4 +1,5 @@
-"use client"
+'use client'
+
 import type React from "react"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
@@ -26,7 +27,7 @@ export default function CasesPageLayout({
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-8">
             <Image
-              src="/images/Stack_lvl_logo.png"
+              src="/images/logo.png"
               alt="СТЭКЛЭВЭЛГРУПП Logo"
               width={120}
               height={60}

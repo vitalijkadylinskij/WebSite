@@ -1,11 +1,9 @@
-"use client";
-
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import technologiesItems from "./data-technologies";
 import { TechnologyCard } from "@/components/ui/TechnologyCard";
 
 export default function TechnologiesSection() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <section id="technologies" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">

@@ -1,10 +1,9 @@
-"use client"
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import { servicesItems } from "./data-service"
 
 
 export function ServicesSection() {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">

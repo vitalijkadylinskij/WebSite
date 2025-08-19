@@ -1,34 +1,31 @@
-'use client';
+'use client'
 
-import i18n, { locales, localeFlags } from '@/i18n';
+import { useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from "react";
+import { useRouter, usePathname } from '@/i18n/navigation';
+
+const locales = ['en', 'ru'] as const;
 
 export default function LanguageSwitcher() {
-  const [mounted, setMounted] = useState(false);
-  const [currentLang, setCurrentLang] = useState(i18n.language);
-
-  useEffect(() => {
-    setCurrentLang(i18n.language);
-    setMounted(true);
-  }, []);
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
 
   const toggleLanguage = () => {
-    const currentIndex = locales.indexOf(currentLang as typeof locales[number]);
+    const currentIndex = locales.indexOf(currentLocale as typeof locales[number]);
     const nextIndex = (currentIndex + 1) % locales.length;
-    const nextLang = locales[nextIndex];
-    i18n.changeLanguage(nextLang);
-    setCurrentLang(nextLang);
-  };
+    const nextLocale = locales[nextIndex];
 
-  if (!mounted) return null;
+    router.replace(pathname, { locale: nextLocale });
+  };
 
   return (
     <Button
       className="px-4 py-2 text-gray-900 hover:bg-transparent text-sm font-medium border-none cursor-pointer bg-transparent shadow-none uppercase"
       onClick={toggleLanguage}
     >
-      {currentLang.toUpperCase()}
+      {currentLocale.toUpperCase()}
     </Button>
   );
 }
+

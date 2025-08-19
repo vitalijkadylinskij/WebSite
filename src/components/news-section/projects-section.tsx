@@ -1,12 +1,10 @@
-"use client";
-
 import projectsItems from "./data-projects"
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 
 
 export default function ProjectsSection() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <section className="py-20 bg-white">

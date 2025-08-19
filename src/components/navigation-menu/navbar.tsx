@@ -1,7 +1,8 @@
-"use client";
+'use client'
 
 import * as React from "react";
 import Link from "next/link";
+import {useTranslations} from 'next-intl';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,7 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "@/components/language-switcher/language-switcher";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -40,7 +41,7 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export default function MainNavbar() {
-  const { t } = useTranslation()
+  const t = useTranslations();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
@@ -48,7 +49,7 @@ export default function MainNavbar() {
         <div className="flex items-center space-x-6">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/images/Stack_lvl_logo.png"
+                src="/images/logo.png"
                 alt="СТЭКЛЭВЭЛГРУПП Logo"
                 width={120}
                 height={60}

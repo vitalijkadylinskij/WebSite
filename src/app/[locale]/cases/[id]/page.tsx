@@ -2,7 +2,7 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { getCaseStudies } from "@/components/case-studies-section/data-cases";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import { use } from "react";
 import CasesPageLayout from "@/app/AppLayouts/casesPage-layout";
 
@@ -14,7 +14,7 @@ interface PageProps {
 
 export default function CaseStudyPage({ params }: PageProps) {
   const resolvedParams = use(params)
-  const { t } = useTranslation()
+  const t = useTranslations()
   const caseStudies = getCaseStudies(t)
   const caseStudy = caseStudies.find((cs) => cs.id === resolvedParams.id)
 

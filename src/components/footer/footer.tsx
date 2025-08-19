@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { Facebook, Instagram, X } from "lucide-react";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <footer id="contact" className="w-full h-full bg-white py-12 md:py-16 lg:py-20">
@@ -21,7 +21,7 @@ export default function Footer() {
           >
             <div>
               <Image
-                src="/images/Stack_lvl_logo.png"
+                src="/images/logo.png"
                 alt="Описание моей SVG-иконки"
                 width={120}
                 height={60}

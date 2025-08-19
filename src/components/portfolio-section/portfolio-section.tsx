@@ -1,13 +1,10 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
-
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import { portfolioItems } from "./data-portfolio"
 import { PortfolioCard3D } from "@/components/ui/PortfolioCard3D";
 
 export default function PortfolioSection() {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <section className="py-20 bg-gradient-to-br from-purple-100 via-blue-50 to-indigo-100 relative overflow-hidden">

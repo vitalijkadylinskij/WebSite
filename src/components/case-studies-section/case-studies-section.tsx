@@ -1,10 +1,8 @@
-"use client"
-
 import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import type { CaseStudy } from "@/types"
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import { getCaseStudies } from "./data-cases"
 
 interface CaseStudiesSectionProps {
@@ -12,7 +10,7 @@ interface CaseStudiesSectionProps {
 }
 
 export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const caseStudies = getCaseStudies(t)
 
   return (

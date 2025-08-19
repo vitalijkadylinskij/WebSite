@@ -1,13 +1,14 @@
-"use client"
-
+'use client'
+import { useLocale } from 'next-intl';
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import logoItems from "./data-trusted-clients";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 
 export default function TrustedClientsSection() {
-  const { t } = useTranslation()
+  const locale = useLocale();
+  const t = useTranslations()
 
   const rows = [
     logoItems.slice(0, 8),
@@ -53,7 +54,7 @@ export default function TrustedClientsSection() {
       </div>
       <div className="container mx-auto px-4 md:px-6 text-center mt-12">
         <Link
-          href="/cases"
+          href={`/${locale}/cases`}
           prefetch={false}
           className="group inline-flex items-center text-blue-500 text-lg font-medium"
         >

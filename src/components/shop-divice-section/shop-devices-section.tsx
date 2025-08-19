@@ -1,8 +1,7 @@
-"use client";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 
 export default function ShopDevicesSection() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32">

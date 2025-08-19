@@ -1,11 +1,10 @@
-"use client"
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import innovationItems from "./data-ai-innovation"
 
 export default function AIInnovationSection() {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
