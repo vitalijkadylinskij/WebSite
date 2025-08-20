@@ -1,17 +1,17 @@
-import projectsItems from "./data-projects"
+import projectsItems from "./data-projects";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import {useTranslations} from 'next-intl';
-
+import { useTranslations } from 'next-intl';
 
 export default function ProjectsSection() {
   const t = useTranslations();
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-bl from-white to-blue-50
+                 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t("projects_section.header")}</h2>
-          <p className="text-lg text-gray-600">{t("projects_section.description")}</p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t("projects_section.header")}</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300">{t("projects_section.description")}</p>
         </div>
 
         <div
@@ -40,3 +40,5 @@ export default function ProjectsSection() {
     </section>
   );
 }
+
+

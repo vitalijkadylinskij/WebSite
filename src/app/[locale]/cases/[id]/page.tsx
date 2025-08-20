@@ -1,4 +1,3 @@
-"use client"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { getCaseStudies } from "@/components/case-studies-section/data-cases";
@@ -24,7 +23,7 @@ export default function CaseStudyPage({ params }: PageProps) {
 
   return (
     <CasesPageLayout backButtonText={t("cases.backToCases")} backButtonHref="/cases" showBackButton={true}>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-gradient-to-l from-white to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-500">
         <div className="container max-w-4xl mx-auto px-4 py-12">
           <div className="mb-8">
             <div className="flex items-center mb-4">
@@ -36,10 +35,12 @@ export default function CaseStudyPage({ params }: PageProps) {
                 className="mr-3 rounded-full"
                 style={{ width: 'auto' }}
               />
-              <span className="text-lg text-gray-600">{caseStudy.companyName}</span>
+              <span className="text-lg text-gray-600 dark:text-gray-300">{caseStudy.companyName}</span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{caseStudy.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              {caseStudy.title}
+            </h1>
 
             <div className="relative w-full aspect-[2/1] mb-8 rounded-lg overflow-hidden">
               <Image
@@ -48,12 +49,14 @@ export default function CaseStudyPage({ params }: PageProps) {
                 alt={caseStudy.title}
                 width={750}
                 height={450}
-                style={{  width: '100%' }}
+                style={{ width: '100%' }}
               />
             </div>
 
-            <div className="prose max-w-none">
-              <p className="text-lg text-gray-700 leading-relaxed">{caseStudy.description}</p>
+            <div className="prose max-w-none dark:prose-invert">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                {caseStudy.description}
+              </p>
             </div>
           </div>
         </div>

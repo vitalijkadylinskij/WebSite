@@ -4,6 +4,7 @@ import "../globals.css";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import { ThemeProvider } from "@/components/theme-provider/theme-provider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,12 +32,23 @@ export default async function RootLayout({
     notFound();
   }
   return (
-    <html lang={locale} data-scroll-behavior="smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <head>
+      <link rel="icon" href="/favicon.ico" />
+      <title>STACKLEVEL</title>
+    </head>
+    <body
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
       <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </body>
+    </ThemeProvider>
+    </body>
     </html>
   );
 }

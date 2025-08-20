@@ -1,21 +1,31 @@
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function ShopDevicesSection() {
   const t = useTranslations();
 
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+    <section
+      id="about"
+      className="w-full py-12 md:py-24 lg:py-32
+                 bg-gradient-to-br from-white to-blue-50
+                 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900
+                 text-gray-900 dark:text-white
+                 transition-colors duration-300"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 text-left">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">{t("shop_devices_section.header")}</h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+              {t("shop_devices_section.header")}
+            </h2>
+            <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
               {t("shop_devices_section.foundation_information")}
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               {t("shop_devices_section.information_about_specialization")}
             </p>
           </div>
+
           <div className="relative">
             <div className="flip-container w-full h-80 rounded-2xl cursor-pointer">
               <div className="flip-inner">
@@ -23,14 +33,14 @@ export default function ShopDevicesSection() {
                   <img
                     src="/images/Technology.png"
                     alt="AI Technology Office"
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg dark:shadow-gray-800"
                   />
                 </div>
                 <div className="flip-back">
                   <img
                     src="/images/ai-financial-office.png"
                     alt="AI Dashboard Analytics"
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg dark:shadow-gray-800"
                   />
                 </div>
               </div>
@@ -41,3 +51,5 @@ export default function ShopDevicesSection() {
     </section>
   );
 }
+
+
