@@ -130,9 +130,8 @@
   "footer": {
     "innovation": "Все права защищены. Инновации в области ИИ.",
     "stacklvl": "СТЭКЛЭВЭЛГРУПП.",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
-    "twitter": "Twitter"
+    "email": "Адрес электронной почты:",
+    "phone": "Контактный телефон:"
   },
   "cases": {
     "title": "Кейсы",

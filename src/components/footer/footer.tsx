@@ -38,30 +38,21 @@ export default function Footer() {
             </div>
           </Link>
 
-          <div className="flex space-x-4">
+          <div className="flex flex-col space-x-4">
             <Link
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+              href="tel:+375293567150"
+              className="text-gray-600 mb-2 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
               prefetch={false}
             >
-              <Facebook className="h-6 w-6" />
-              <span className="sr-only">{t("footer.facebook")}</span>
+              <span>{t("footer.phone")} +375 29 356 71 50</span>
             </Link>
             <Link
-              href="#"
+              href="https://mail.google.com/mail/?view=cm&to=vitali.stacklevel@gmail.com"
+              target="_blank"
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
-              prefetch={false}
+              rel="noopener noreferrer"
             >
-              <Instagram className="h-6 w-6" />
-              <span className="sr-only">{t("footer.instagram")}</span>
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
-              prefetch={false}
-            >
-              <X className="h-6 w-6" />
-              <span className="sr-only">X {t("footer.twitter")}</span>
+              <span>{t("footer.email")} vitali.stacklevel@gmail.com</span>
             </Link>
           </div>
         </div>

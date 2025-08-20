@@ -129,9 +129,8 @@
   "footer": {
     "innovation": "All rights reserved. Innovations in AI.",
     "stacklvl": "STEKLEVELGROUP.",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
-    "twitter": "Twitter"
+    "email": "Email:",
+    "phone": "Phone:"
   },
   "cases": {
     "title": "Cases",
