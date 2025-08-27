@@ -33,7 +33,7 @@ export function ServicesSection() {
           {servicesItems.map((service) => (
             <div
               key={service.id}
-              className="group cursor-pointer text-center transition-colors duration-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl p-4"
+              className="group cursor-pointer text-center transition-colors duration-500 hover:bg-indigo-100 dark:hover:bg-gray-800 rounded-xl p-4"
             >
               <div
                 className={`w-16 h-16 ${service.bgColor} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg dark:shadow-black/40 transition-transform duration-300 group-hover:scale-110 group-hover:shadow-xl`}
