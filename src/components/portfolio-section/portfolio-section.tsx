@@ -7,7 +7,7 @@ export default function PortfolioSection() {
   const t = useTranslations()
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 relative overflow-hidden transition-colors duration-300">
+    <section className="py-20 relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t("portfolio_section.title")}</h2>
