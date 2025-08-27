@@ -23,7 +23,7 @@ export default function CaseStudyPage({ params }: PageProps) {
 
   return (
     <CasesPageLayout backButtonText={t("cases.backToCases")} backButtonHref="/cases" showBackButton={true}>
-      <main className="min-h-screen bg-gradient-to-l from-white to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-500">
+      <main className="min-h-screen bg-gradient-to-tr from-purple-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 transition-colors duration-500">
         <div className="container max-w-4xl mx-auto px-4 py-12">
           <div className="mb-8">
             <div className="flex items-center mb-4">

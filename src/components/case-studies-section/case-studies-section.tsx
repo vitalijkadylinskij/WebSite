@@ -15,8 +15,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = () => {
 
   return (
     <section className="w-full py-12
-      bg-gradient-to-r from-white to-white
-      dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+     bg-gradient-to-tr from-purple-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       <div className="container max-w-[80%] mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-12 text-left">
           {t("cases.title")}
