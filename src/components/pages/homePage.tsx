@@ -1,4 +1,3 @@
-import ProjectsSection from "@/components/news-section/projects-section";
 import ShopDevicesSection from "@/components/shop-divice-section/shop-devices-section";
 import PortfolioSection from "@/components/portfolio-section/portfolio-section";
 import AiInnovationSection from "@/components/ai-innovation-section/ai-innovation-section";
@@ -16,7 +15,6 @@ export default function HomePage() {
         <div className="max-w-[80%]">
           <ShopDevicesSection />
           <TechnologiesSection />
-          <ProjectsSection />
           <PortfolioSection />
           <AiInnovationSection />
           <ServicesSection />

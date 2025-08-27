@@ -10,7 +10,7 @@ export default function HomePageLayout({ children }: HomepageLayoutProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-white
-                 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+                 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       <MainNavbar />
       {children}
       <Footer />

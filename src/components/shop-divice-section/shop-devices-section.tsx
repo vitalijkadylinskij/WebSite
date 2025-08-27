@@ -8,7 +8,7 @@ export default function ShopDevicesSection() {
       id="about"
       className="w-full py-12 md:py-24 lg:py-32
                  bg-gradient-to-br from-white to-blue-50
-                 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900
+                 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900
                  text-gray-900 dark:text-white
                  transition-colors duration-300"
     >
