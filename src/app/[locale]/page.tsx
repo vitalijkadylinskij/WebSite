@@ -1,4 +1,5 @@
 import HomePage from "@/components/pages/homePage";
+import GradientLayout from "@/app/AppLayouts/gradient-layout";
 
 export default function Home() {
 

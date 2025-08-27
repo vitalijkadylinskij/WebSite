@@ -8,7 +8,7 @@ export default function Footer() {
   const t = useTranslations();
 
   return (
-    <footer id="contact" className="w-full h-full bg-white dark:bg-gray-900 py-12 md:py-16 lg:py-20 transition-colors duration-500">
+    <footer id="contact" className="w-full h-full py-12 md:py-16 lg:py-20 transition-colors duration-500">
       <div className="container w-full max-w-full px-4 md:px-6 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex justify-start transition-colors duration-500"></div>
 
       <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 text-left">

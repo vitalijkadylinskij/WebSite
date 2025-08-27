@@ -17,7 +17,7 @@ export default function TrustedClientsSection() {
   ];
 
   return (
-    <section className="w-full py-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+    <section className="w-full py-12 transition-colors duration-500">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-12 transition-colors duration-500">
           {t("trustedClients.title")}

@@ -6,7 +6,6 @@ import TrustedClientsSection from "@/components/trusted-clients-section/trusted-
 import TechnologiesSection from "@/components/technologies-section/technologies-section";
 import { ServicesSection } from "@/components/service-section/services-section";
 import HomePageLayout from "@/app/AppLayouts/homePage-layout";
-import GradientLayout from "@/app/AppLayouts/gradient-layout";
 
 export default function HomePage() {
   return (
@@ -16,10 +15,8 @@ export default function HomePage() {
         <div className="max-w-[80%]">
           <ShopDevicesSection />
           <TechnologiesSection />
-          <GradientLayout>
-            <PortfolioSection />
-            <AiInnovationSection />
-          </GradientLayout>
+          <PortfolioSection />
+          <AiInnovationSection />
           <ServicesSection />
         </div>
         <TrustedClientsSection />

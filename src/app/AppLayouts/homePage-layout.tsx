@@ -9,8 +9,7 @@ interface HomepageLayoutProps {
 export default function HomePageLayout({ children }: HomepageLayoutProps) {
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-white
-                 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-tr from-purple-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       <MainNavbar />
       {children}
       <Footer />

@@ -7,7 +7,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 transition-colors duration-500"
+      className="py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
