@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Facebook, Instagram, X } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 import * as React from "react";

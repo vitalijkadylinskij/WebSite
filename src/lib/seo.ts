@@ -68,7 +68,7 @@ export function generateTechStackMetadata(title: string, technologies: string[],
   })
 }
 
-export function generateStructuredData(type: "article" | "breadcrumb" | "faq", data: any) {
+export function generateStructuredData(type: "article" | "breadcrumb" | "faq", data: Record<string, unknown>): string {
   const baseSchema = {
     "@context": "https://schema.org",
     "@type": type === "article" ? "BlogPosting" : type === "breadcrumb" ? "BreadcrumbList" : "FAQPage",

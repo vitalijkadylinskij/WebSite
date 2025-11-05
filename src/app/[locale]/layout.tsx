@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
@@ -16,7 +16,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://website-bjks.onrender.com"),
   title: "STACKLEVEL | Professional Web Solutions",
   description:  "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI (TensorFlow, PyTorch, OpenAI). Build reliable, scalable solutions with our expert team.",
   keywords: [
@@ -47,23 +54,23 @@ export const metadata: Metadata = {
     title: "STACKLEVEL | Professional Web Solutions",
     description:
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies (TensorFlow, PyTorch, OpenAI, LangChain)",
-    images: [
-      {
-        url: "https://website-bjks.onrender.com/seo-image.png",
-        width: 1200,
-        height: 630,
-        alt: "STACKLEVEL",
-        type: "image/png",
-      },
-    ],
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "STACKLEVEL | Professional Web Solutions",
     description:
       "React, TypeScript, Python, Java, PostgreSQL, MongoDB & AI development with TensorFlow, PyTorch, OpenAI",
-    images: ["https://website-bjks.onrender.com/seo-image.png"],
+    images: ["/og-image.ppg"],
     creator: "@stacklevel",
+  },
+
+  other: {
+    title: "STACKLEVEL | Professional Web Solutions",
+    description:
+      "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
+    image: "https://website-bjks.onrender.com/og-image.jpg",
+    site: "@stacklevel",
   },
 
   robots: {
@@ -80,12 +87,6 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "https://website-bjks.onrender.com/en",
-  },
-
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
   },
 };
 
