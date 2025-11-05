@@ -30,16 +30,20 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) notFound();
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   const messagesPath = path.join(process.cwd(), "messages", `${locale}.json`);
   const messages = JSON.parse(fs.readFileSync(messagesPath, "utf-8"));
+
+  const seoImage = "https://website-bjks.onrender.com/og-image.png";
 
   return generateSEOMetadata({
     title: messages.seo.title,
     description: messages.seo.description,
     locale: locale as "ru" | "en",
-    image: "https://website-bjks.onrender.com/og-image.png",
+    image: seoImage,
     url: `https://website-bjks.onrender.com/${locale}`,
   });
 }
