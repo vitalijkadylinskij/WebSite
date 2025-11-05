@@ -4,7 +4,8 @@ import "../globals.css";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import { ThemeProvider } from "@/components/theme-provider/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider/theme-provider";
+import { generateStructuredData, generateSEOMetadata } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,88 +23,12 @@ export const viewport: Viewport = {
   maximumScale: 5,
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://website-bjks.onrender.com"),
+export const metadata: Metadata = generateSEOMetadata({
   title: "STACKLEVEL | Professional Web Solutions",
-  description:  "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI (TensorFlow, PyTorch, OpenAI). Build reliable, scalable solutions with our expert team.",
-  keywords: [
-    "web development",
-    "SEO optimization",
-    "digital solutions",
-    "STACKLEVEL",
-    "React",
-    "TypeScript",
-    "Python",
-    "Java",
-    "PostgreSQL",
-    "MongoDB",
-    "AI development",
-    "TensorFlow",
-    "PyTorch",
-    "OpenAI",
-    "LangChain",
-  ],
-  creator: "STACKLEVEL",
-  generator: "Next.js",
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-
-  alternates: {
-    canonical: "https://website-bjks.onrender.com",
-  },
-
-  openGraph: {
-    type: "website",
-    locale: "en",
-    url: "https://website-bjks.onrender.com",
-    siteName: "STACKLEVEL",
-    title: "STACKLEVEL | Professional Web Solutions",
-    description:
-      "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies (TensorFlow, PyTorch, OpenAI, LangChain)",
-    images: [
-      {
-        url: "https://website-bjks.onrender.com/seo-image.png",
-        width: 1200,
-        height: 630,
-        alt: "STACKLEVEL - Professional Web Solutions",
-        type: "image/png",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "STACKLEVEL | Professional Web Solutions",
-    description:
-      "React, TypeScript, Python, Java, PostgreSQL, MongoDB & AI development with TensorFlow, PyTorch, OpenAI",
-    images: [
-      {
-        url: "https://website-bjks.onrender.com/seo-image.png",
-        width: 1200,
-        height: 630,
-        alt: "STACKLEVEL",
-      },
-    ],
-    creator: "@stacklevel",
-  },
-
-  other: {
-    "telegram:title": "STACKLEVEL | Professional Web Solutions",
-    "telegram:description":
-      "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
-    "telegram:image": "https://website-bjks.onrender.com/seo-image.png",
-    "telegram:site": "@stacklevel",
-  },
-};
+  description:
+    "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI (TensorFlow, PyTorch, OpenAI). Build reliable, scalable solutions with our expert team.",
+  locale: "en",
+});
 
 export default async function RootLayout({
   children,params
@@ -115,10 +40,16 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  const jsonLd = generateStructuredData("website", {
+    name: "STACKLEVEL",
+    url: `https://website-bjks.onrender.com/${locale}`,
+    sameAs: ["https://twitter.com/stacklevel", "https://t.me/stacklevel"],
+  });
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
     <head>
       <link rel="icon" href="/favicon.ico" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <title></title>
     </head>
     <body

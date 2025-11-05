@@ -1,30 +1,39 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
 export interface SEOMetadataProps {
-  title: string
-  description: string
-  image?: string
-  url?: string
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  locale?: "ru" | "en";
   article?: {
-    publishedTime?: string
-    modifiedTime?: string
-    authors?: string[]
-    tags?: string[]
-  }
+    publishedTime?: string;
+    modifiedTime?: string;
+    authors?: string[];
+    tags?: string[];
+  };
 }
 
 export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
   const {
     title,
     description,
-    image = "https://website-bjks.onrender.com/seo-image.png",
+    image,
     url = "https://website-bjks.onrender.com",
+    locale = "ru",
     article,
-  } = props
+  } = props;
+
+  const seoImage = image ?? `${url}/seo-image.png`;
+  const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
 
   return {
     title: `${title} | STACKLEVEL`,
     description,
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: `${title} | STACKLEVEL`,
       description,
@@ -32,12 +41,14 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
       type: article ? "article" : "website",
       images: [
         {
-          url: image,
+          url: seoImage,
           width: 1200,
           height: 630,
           alt: title,
         },
       ],
+      locale: ogLocale,
+      siteName: "STACKLEVEL",
       ...(article && {
         publishedTime: article.publishedTime,
         modifiedTime: article.modifiedTime,
@@ -49,30 +60,36 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
       card: "summary_large_image",
       title: `${title} | STACKLEVEL`,
       description,
-      images: [image],
+      images: [seoImage],
+      creator: "@stacklevel",
     },
     alternates: {
       canonical: url,
+      languages: {
+        ru: url.replace("/en/", "/ru/"),
+        en: url.replace("/ru/", "/en/"),
+      },
     },
-  }
+  };
 }
 
-export function generateTechStackMetadata(title: string, technologies: string[], description: string): Metadata {
-  const techString = technologies.join(", ")
-  const fullDescription = `${description}. Technologies: ${techString}`
-
-  return generateSEOMetadata({
-    title,
-    description: fullDescription,
-    url: `https://website-bjks.onrender.com/${title.toLowerCase().replace(/\s+/g, "-")}`,
-  })
-}
-
-export function generateStructuredData(type: "article" | "breadcrumb" | "faq", data: Record<string, unknown>): string {
+export function generateStructuredData(
+  type: "website" | "article" | "breadcrumb" | "faq",
+  data: Record<string, unknown>
+): string {
   const baseSchema = {
     "@context": "https://schema.org",
-    "@type": type === "article" ? "BlogPosting" : type === "breadcrumb" ? "BreadcrumbList" : "FAQPage",
-  }
+    "@type": type === "article"
+      ? "BlogPosting"
+      : type === "breadcrumb"
+        ? "BreadcrumbList"
+        : type === "faq"
+          ? "FAQPage"
+          : "WebSite",
+  };
 
-  return JSON.stringify({ ...baseSchema, ...data })
+  return JSON.stringify({ ...baseSchema, ...data });
 }
+
+
+
