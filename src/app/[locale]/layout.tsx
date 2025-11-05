@@ -1,9 +1,9 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 import { generateStructuredData, generateSEOMetadata } from "@/lib/seo";
 
@@ -21,7 +21,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-};
+}
 
 export default async function RootLayout({
                                            children,
@@ -46,6 +46,7 @@ export default async function RootLayout({
   const metadata: Metadata = generateSEOMetadata({
     title: seoTitle,
     description: seoDescription,
+    locale: locale as "ru" | "en",
     url: `https://website-bjks.onrender.com/${locale}`,
   });
 
