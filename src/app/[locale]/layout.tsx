@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "STACKLEVEL - Professional Web Solutions",
-        type: "image/png",
+        type: "image/jpg",
       },
     ],
   },
