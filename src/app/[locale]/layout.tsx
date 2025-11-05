@@ -56,9 +56,9 @@ export const metadata: Metadata = {
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies (TensorFlow, PyTorch, OpenAI, LangChain)",
     images: [
       {
-        url: "https://website-bjks.onrender.com/seo-image.jpeg",
-        width: 1024,
-        height: 1024,
+        url: "https://website-bjks.onrender.com/seo-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "STACKLEVEL - Professional Web Solutions",
         type: "image/png",
       },
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
       "React, TypeScript, Python, Java, PostgreSQL, MongoDB & AI development with TensorFlow, PyTorch, OpenAI",
     images: [
       {
-        url: "https://website-bjks.onrender.com/seo-image.jpeg",
-        width: 1024,
-        height: 1024,
+        url: "https://website-bjks.onrender.com/seo-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "STACKLEVEL",
       },
     ],
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     "telegram:title": "STACKLEVEL | Professional Web Solutions",
     "telegram:description":
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
-    "telegram:image": "https://website-bjks.onrender.com/seo-image.png",
+    "telegram:image": "https://website-bjks.onrender.com/seo-image.jpg",
     "telegram:site": "@stacklevel",
   },
 
