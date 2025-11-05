@@ -43,7 +43,7 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
       locale: ogLocale,
       images: [
         {
-          url: seoImage,
+          url: "https://website-bjks.onrender.com/og-image.png",
           width: 1200,
           height: 630,
           alt: title,
@@ -62,7 +62,7 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
       card: "summary_large_image",
       title: `${title} | STACKLEVEL`,
       description,
-      images: [seoImage],
+      images: "https://website-bjks.onrender.com/og-image.png",
       creator: "@stacklevel",
     },
     alternates: {
