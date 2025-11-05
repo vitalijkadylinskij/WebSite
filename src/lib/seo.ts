@@ -24,7 +24,7 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
     article,
   } = props;
 
-  const seoImage = image ?? `${url}/og-image.png`;
+  const seoImage = image ?? "https://website-bjks.onrender.com/og-image.png";
   const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
 
   return {

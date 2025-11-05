@@ -39,6 +39,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title: messages.seo.title,
     description: messages.seo.description,
     locale: locale as "ru" | "en",
+    image: "https://website-bjks.onrender.com/og-image.png",
+    url: `https://website-bjks.onrender.com/${locale}`,
   });
 }
 
