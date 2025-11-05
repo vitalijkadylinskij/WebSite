@@ -66,11 +66,11 @@ export const metadata: Metadata = {
   },
 
   other: {
-    title: "STACKLEVEL | Professional Web Solutions",
-    description:
+    "telegram:title": "STACKLEVEL | Professional Web Solutions",
+    "telegram:description":
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
-    images: ["/og-image.ppg"],
-    site: "@stacklevel",
+    "telegram:image": "/og-image.ppg",
+    "telegram:site": "@stacklevel",
   },
 
   robots: {
