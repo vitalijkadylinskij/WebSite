@@ -43,6 +43,7 @@ export default function CasesPageLayout({
             />
             {showBackButton && (
               <Link
+                rel="alternate"
                 href={backButtonHref}
                 className="flex items-center gap-10 space-x-2 text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
               >

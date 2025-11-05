@@ -48,7 +48,7 @@ export default function MainNavbar() {
                        dark:border-gray-700 dark:bg-gray-900/80 transition-colors duration-300">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center space-x-6">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" rel="alternate" className="flex items-center space-x-2">
             <Image
               src="/images/logo.png"
               alt="Lighte Logo"
@@ -73,6 +73,7 @@ export default function MainNavbar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  rel="alternate"
                   href="#about"
                   className="hover:cursor-pointer text-gray-700 dark:text-gray-200 hover:text-primary"
                 >
@@ -81,6 +82,7 @@ export default function MainNavbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  rel="alternate"
                   href="#technologies"
                   className="hover:cursor-pointer text-gray-700 dark:text-gray-200 hover:text-primary"
                 >
@@ -89,6 +91,7 @@ export default function MainNavbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  rel="alternate"
                   href="#services"
                   className="hover:cursor-pointer text-gray-700 dark:text-gray-200 hover:text-primary"
                 >
@@ -97,6 +100,7 @@ export default function MainNavbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  rel="alternate"
                   href="#contact"
                   className="hover:cursor-pointer text-gray-700 dark:text-gray-200 hover:text-primary"
                 >

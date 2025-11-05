@@ -54,6 +54,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = () => {
                     </div>
                     <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">
                       <Link
+                        rel="alternate"
                         href={`/cases/${caseStudy.id}`}
                         prefetch={false}
                         className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200"
