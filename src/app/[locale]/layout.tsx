@@ -23,12 +23,37 @@ export const viewport: Viewport = {
   maximumScale: 5,
 }
 
-export const metadata: Metadata = generateSEOMetadata({
+export const metadata: Metadata = {
   title: "STACKLEVEL | Professional Web Solutions",
   description:
-    "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI (TensorFlow, PyTorch, OpenAI). Build reliable, scalable solutions with our expert team.",
-  locale: "en",
-});
+    "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI.",
+  openGraph: {
+    title: "STACKLEVEL | Professional Web Solutions",
+    description:
+      "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI.",
+    url: "https://website-bjks.onrender.com/",
+    siteName: "STACKLEVEL",
+    images: [
+      {
+        url: "https://website-bjks.onrender.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "STACKLEVEL",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@stacklevel",
+    title: "STACKLEVEL | Professional Web Solutions",
+    description:
+      "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI.",
+    images: ["https://website-bjks.onrender.com/og-image.png"],
+  },
+};
+
 
 export default async function RootLayout({
   children,params

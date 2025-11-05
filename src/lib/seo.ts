@@ -39,6 +39,8 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
       description,
       url,
       type: article ? "article" : "website",
+      siteName: "STACKLEVEL",
+      locale: ogLocale,
       images: [
         {
           url: seoImage,
@@ -47,14 +49,14 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
           alt: title,
         },
       ],
-      locale: ogLocale,
-      siteName: "STACKLEVEL",
-      ...(article && {
-        publishedTime: article.publishedTime,
-        modifiedTime: article.modifiedTime,
-        authors: article.authors,
-        tags: article.tags,
-      }),
+      ...(article
+        ? {
+          publishedTime: article.publishedTime,
+          modifiedTime: article.modifiedTime,
+          authors: article.authors,
+          tags: article.tags,
+        }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -66,8 +68,8 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
     alternates: {
       canonical: url,
       languages: {
-        ru: url.replace("/en/", "/ru/"),
-        en: url.replace("/ru/", "/en/"),
+        ru: url.includes("/en/") ? url.replace("/en/", "/ru/") : url,
+        en: url.includes("/ru/") ? url.replace("/ru/", "/en/") : url,
       },
     },
   };
@@ -79,17 +81,15 @@ export function generateStructuredData(
 ): string {
   const baseSchema = {
     "@context": "https://schema.org",
-    "@type": type === "article"
-      ? "BlogPosting"
-      : type === "breadcrumb"
-        ? "BreadcrumbList"
-        : type === "faq"
-          ? "FAQPage"
-          : "WebSite",
+    "@type":
+      type === "article"
+        ? "BlogPosting"
+        : type === "breadcrumb"
+          ? "BreadcrumbList"
+          : type === "faq"
+            ? "FAQPage"
+            : "WebSite",
   };
 
   return JSON.stringify({ ...baseSchema, ...data });
 }
-
-
-

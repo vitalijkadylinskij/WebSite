@@ -4,8 +4,11 @@ import { routing } from "@/i18n/routing";
 const baseUrl = "https://website-bjks.onrender.com";
 
 export const GET = async () => {
-  const locales = routing.locales; // ['ru', 'en']
-  let robotsTxt = `User-agent: *
+  const locales = routing.locales;
+
+  let robotsTxt = `# robots.txt for STACKLEVEL
+# Generated dynamically
+User-agent: *
 Allow: /
 Crawl-delay: 10
 `;
@@ -22,7 +25,10 @@ Crawl-delay: 10
   robotsTxt += `
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 5
 `;
+
+  robotsTxt += `\nHost: ${baseUrl}\n`;
 
   return new NextResponse(robotsTxt, {
     status: 200,
