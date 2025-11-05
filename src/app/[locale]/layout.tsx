@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies (TensorFlow, PyTorch, OpenAI, LangChain)",
     images: [
       {
-        url: "https://website-bjks.onrender.com/seo-image.png",
+        url: "https://website-bjks.onrender.com/seo-image.jpeg",
         width: 1024,
         height: 1024,
         alt: "STACKLEVEL - Professional Web Solutions",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "React, TypeScript, Python, Java, PostgreSQL, MongoDB & AI development with TensorFlow, PyTorch, OpenAI",
     images: [
       {
-        url: "https://website-bjks.onrender.com/seo-image.png",
+        url: "https://website-bjks.onrender.com/seo-image.jpeg",
         width: 1024,
         height: 1024,
         alt: "STACKLEVEL",
