@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en",
     url: "https://website-bjks.onrender.com",
     siteName: "STACKLEVEL",
     title: "STACKLEVEL | Professional Web Solutions",
