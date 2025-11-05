@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://website-bjks.onrender.com/seo-image.png",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 1024,
         alt: "STACKLEVEL - Professional Web Solutions",
         type: "image/png",
       },
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://website-bjks.onrender.com/seo-image.png",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 1024,
         alt: "STACKLEVEL",
       },
     ],
