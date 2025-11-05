@@ -1,11 +1,13 @@
-import type { Metadata, Viewport } from "next"
+import type { Metadata, Viewport } from "next";
+import fs from "fs";
+import path from "path";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
-import { generateStructuredData, generateSEOMetadata } from "@/lib/seo";
+import { generateSEOMetadata, generateStructuredData } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,38 +25,40 @@ export const viewport: Viewport = {
   maximumScale: 5,
 }
 
+
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  const messagesPath = path.join(process.cwd(), "messages", `${locale}.json`);
+  const messages = JSON.parse(fs.readFileSync(messagesPath, "utf-8"));
+
+  return generateSEOMetadata({
+    title: messages.seo.title,
+    description: messages.seo.description,
+    locale: locale as "ru" | "en",
+  });
+}
+
+
 export default async function RootLayout({
-                                           children,
-                                           params,
-                                         }: {
+  children,params
+}: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+  params: Promise<{locale: string}>;
+}>) {
+  const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-
-  const seoDescription = locale === "ru"
-    ? "STACKLEVEL предоставляет профессиональную разработку веб-приложений с использованием React, TypeScript, Python, Java, PostgreSQL, MongoDB и AI."
-    : "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI.";
-
-  const seoTitle = locale === "ru"
-    ? "STACKLEVEL | Профессиональные веб-решения"
-    : "STACKLEVEL | Professional Web Solutions";
-
-  const metadata: Metadata = generateSEOMetadata({
-    title: seoTitle,
-    description: seoDescription,
-    locale: locale as "ru" | "en",
-    url: `https://website-bjks.onrender.com/${locale}`,
-  });
-
   const jsonLd = generateStructuredData("website", {
     name: "STACKLEVEL",
     url: `https://website-bjks.onrender.com/${locale}`,
     sameAs: ["https://twitter.com/stacklevel", "https://t.me/stacklevel"],
   });
+
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
     <body

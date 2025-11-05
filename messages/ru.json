@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Профессиональные веб-решения",
+    "description": "STACKLEVEL предоставляет профессиональную разработку веб-приложений с использованием React, TypeScript, Python, Java, PostgreSQL, MongoDB и AI."
+  },
   "navigation": {
     "about": "О нас",
     "technologies": "Технологии",

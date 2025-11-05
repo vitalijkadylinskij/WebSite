@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Professional Web Solutions",
+    "description": "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI."
+  },
   "navigation": {
     "about": "About",
     "technologies": "Technologies",
