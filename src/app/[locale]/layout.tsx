@@ -51,6 +51,7 @@ export const metadata: Metadata = {
     description:
       "STACKLEVEL provides professional web development using React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI.",
     images: ["https://website-bjks.onrender.com/og-image.png"],
+    creator: "@stacklevel",
   },
 };
 
@@ -75,7 +76,6 @@ export default async function RootLayout({
     <head>
       <link rel="icon" href="/favicon.ico" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <title></title>
     </head>
     <body
       className={`${geistSans.variable} ${geistMono.variable}`}
