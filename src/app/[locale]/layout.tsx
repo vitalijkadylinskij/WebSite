@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "STACKLEVEL | Professional Web Solutions",
     description:
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
-    image: "https://website-bjks.onrender.com/og-image.jpg",
+    images: ["/og-image.ppg"],
     site: "@stacklevel",
   },
 
