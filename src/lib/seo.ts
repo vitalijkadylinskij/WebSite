@@ -17,7 +17,7 @@ export function generateSEOMetadata(props: SEOMetadataProps): Metadata {
   const {
     title,
     description,
-    image = "https://website-bjks.onrender.com/seo-image.png",
+    image = "/seo-image.png",
     url = "https://website-bjks.onrender.com",
     article,
   } = props

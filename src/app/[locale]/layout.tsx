@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     title: "STACKLEVEL | Professional Web Solutions",
     description:
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies (TensorFlow, PyTorch, OpenAI, LangChain)",
-    images: ["/og-image.png"],
+    images: ["/seo-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "STACKLEVEL | Professional Web Solutions",
     description:
       "React, TypeScript, Python, Java, PostgreSQL, MongoDB & AI development with TensorFlow, PyTorch, OpenAI",
-    images: ["/og-image.ppg"],
+    images: ["/seo-image.ppg"],
     creator: "@stacklevel",
   },
 
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     "telegram:title": "STACKLEVEL | Professional Web Solutions",
     "telegram:description":
       "Expert web development with React, TypeScript, Python, Java, PostgreSQL, MongoDB, and AI technologies",
-    "telegram:image": "/og-image.ppg",
+    "telegram:image": "/seo-image.ppg",
     "telegram:site": "@stacklevel",
   },
 
