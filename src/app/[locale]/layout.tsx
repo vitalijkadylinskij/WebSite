@@ -73,10 +73,6 @@ export default async function RootLayout({
   });
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
-    <head>
-      <link rel="icon" href="/favicon.ico" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-    </head>
     <body
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
